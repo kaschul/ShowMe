@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IShowDisplay } from '../ishow-display';
-import { TvMazeService } from '../tv-maze.service';
 
 @Component({
   selector: 'app-show-display',
