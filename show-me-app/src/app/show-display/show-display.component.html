@@ -5,19 +5,24 @@
     <span>
         <div>
             {{current.showName}}
-            {{current.showLanguage}}
-            {{current.showGenres}}
-            {{current.showSummary}}
+            <div class="spacer"></div>
+            Language: {{current.showLanguage}}
+            <div class="spacer"></div>
+            Genres: {{current.showGenres}}
+            <div class="spacer"></div>
+            Summary: {{current.showSummary}}
         </div>
         <div>
             <img [src]='current.showImage' />
         </div>
         <div>
-            {{current.showStatus}}
-            {{current.showRuntime}}
-            {{current.showTime}}
+            Status: {{current.showStatus}}
+            <div class="spacer"></div>
+            Runtime: {{current.showRuntime}} minutes
+            <div class="spacer"></div>
+            Next showing(s): {{current.showTime}}
             {{current.showDays}}
-            {{current.showNetwork}}
+            on {{current.showNetwork}}
         </div>
     </span>
 </div>
