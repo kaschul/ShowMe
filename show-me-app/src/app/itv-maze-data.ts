@@ -1,12 +1,12 @@
 export interface ITvMazeData {
     name: string,
     language: string,
-    genres: [string],
+    genres: [],
     status: string,
     runtime: number,
     schedule: {
         time: string,
-        days: [string]
+        days: []
     },
     network: {
         name: string

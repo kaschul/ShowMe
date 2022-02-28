@@ -1,4 +1,7 @@
-<div>
+<div *ngIf="!current.showName">
+    No data available
+</div>
+<div *ngIf="current.showName">
     <span>
         <div>
             {{current.showName}}
@@ -7,7 +10,7 @@
             {{current.showSummary}}
         </div>
         <div>
-            <img [src]="current.showImage">
+            <img [src]='current.showImage' />
         </div>
         <div>
             {{current.showStatus}}

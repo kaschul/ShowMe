@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IShowDisplay } from '../ishow-display';
 import { TvMazeService } from '../tv-maze.service';
 
@@ -9,8 +9,8 @@ import { TvMazeService } from '../tv-maze.service';
 })
 export class ShowDisplayComponent implements OnInit {
 
-  current: IShowDisplay
-  constructor(private tvMazeService: TvMazeService) { 
+  @Input() current: IShowDisplay
+  constructor() { 
     this.current = {
       showName: '',
       showLanguage: '',
@@ -25,8 +25,6 @@ export class ShowDisplayComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    this.tvMazeService.getShowInfo('house').subscribe(data => this.current = data)
-  }
+  ngOnInit(): void {}
 
 }
