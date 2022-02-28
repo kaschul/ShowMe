@@ -1,8 +1,20 @@
 <div>
-  <h1>ShowMe</h1>
-  <p>Find when your favorite TV show is on next!</p>
+  <mat-toolbar color="primary">
+    ShowMe
+  </mat-toolbar>
 </div>
 
 <div>
-  <app-show-display></app-show-display>
+  <mat-card color="secondary">
+    <mat-card-title>
+      Find when your favorite TV show is on next!
+    </mat-card-title>
+    <app-show-search (searchEvent)="doSearch($event)"></app-show-search>
+  </mat-card>
+</div>
+
+<div>
+  <mat-card color="primary">
+    <app-show-display [current]="showDisplay"></app-show-display>
+  </mat-card>
 </div>
