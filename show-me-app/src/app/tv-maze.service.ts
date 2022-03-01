@@ -10,26 +10,27 @@ import { ITvMazeData } from './itv-maze-data';
 })
 export class TvMazeService {
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient : HttpClient) {}
 
   getShowInfo(showNameEntered: string){
-    return this.httpClient.get<ITvMazeData>
-    (`https://api.tvmaze.com/singlesearch/shows?q=${showNameEntered}`)
-    .pipe(map(data => this.transformToIShowDisplay(data) ))
-  }
+    return this.httpClient.get<ITvMazeData[]>
+    (`https://api.tvmaze.com/search/shows?q=${showNameEntered}`)
+    .pipe(map((data => {
+      return data.map((show) => {return this.transformToIShowDisplay(show)})})))
+    }
 
-  private transformToIShowDisplay(data: ITvMazeData){
+  private transformToIShowDisplay(showdata: ITvMazeData){
     return {
-      showName: data.name,
-      showLanguage: data.language,
-      showGenres: data.genres,
-      showStatus: data.status,
-      showRuntime: data.runtime,
-      showTime: data.schedule.time,
-      showDays: data.schedule.days,
-      showNetwork: data.network.name,
-      showImage: data.image.medium,
-      showSummary: data.summary.replace(/<[^>]*>/g, '')
+      showName: showdata.show.name,
+      showLanguage: showdata.show.language,
+      showGenres: showdata.show.genres,
+      showStatus: showdata.show.status,
+      showRuntime: showdata.show.runtime,
+      showTime: showdata.show.schedule.time,
+      showDays: showdata.show.schedule.days,
+      showNetwork: showdata.show.network.name,
+      showImage: showdata.show.image.medium,
+      showSummary: showdata.show.summary.replace(/<[^>]*>/g, '')
     }
   }
 }
