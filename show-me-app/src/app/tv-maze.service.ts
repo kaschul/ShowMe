@@ -29,7 +29,7 @@ export class TvMazeService {
       showDays: data.schedule.days,
       showNetwork: data.network.name,
       showImage: data.image.medium,
-      showSummary: data.summary
+      showSummary: data.summary.replace(/<[^>]*>/g, '')
     }
   }
 }
