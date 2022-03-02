@@ -11,6 +11,7 @@ export class ShowSearchComponent implements OnInit {
   
   @Output() searchEvent = new EventEmitter<string>();
   search = new FormControl('', [Validators.minLength(3)])
+ 
   constructor() { }
 
   ngOnInit(): void {
