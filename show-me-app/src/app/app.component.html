@@ -9,7 +9,10 @@
     <mat-card-subtitle>
       Find when your favorite TV show is on next!
     </mat-card-subtitle>
+    <mat-form-field>
     <app-show-search (searchEvent)="doSearch($event)"></app-show-search>
+    <mat-select (searchEvent)="display(this)"></mat-select>
+    </mat-form-field>
   </mat-card>
 </div>
 
