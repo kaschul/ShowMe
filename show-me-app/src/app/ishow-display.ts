@@ -6,6 +6,7 @@ export interface IShowDisplay {
     showRuntime: number
     showTime: string
     showDays: Array<string>
+    showRating: number
     showNetwork: string
     showImage: string
     showSummary: string

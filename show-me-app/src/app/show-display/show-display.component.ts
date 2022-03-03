@@ -18,6 +18,7 @@ export class ShowDisplayComponent implements OnInit {
       showRuntime: 0,
       showTime: '',
       showDays: [],
+      showRating: 0,
       showNetwork: '',
       showImage: '',
       showSummary: ''
