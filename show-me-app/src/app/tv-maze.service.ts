@@ -20,11 +20,12 @@ export class TvMazeService {
     return {
       showName: showdata.name,
       showLanguage: showdata.language,
-      showGenres: showdata.genres,
+      showGenres: showdata.genres.map(x => " " + x),
       showStatus: showdata.status,
       showRuntime: showdata.runtime,
       showTime: showdata.schedule.time,
-      showDays: showdata.schedule.days,
+      showDays: showdata.schedule.days.map(x => " " + x),
+      showRating: showdata.rating.average,
       showNetwork: showdata.network.name,
       showImage: showdata.image.medium,
       showSummary: showdata.summary.replace(/<[^>]*>/g, '')

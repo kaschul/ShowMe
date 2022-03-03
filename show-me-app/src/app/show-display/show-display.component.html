@@ -29,6 +29,8 @@
                 <div class="spacer"></div>
                 Genres: {{current.showGenres}}
                 <div class="spacer"></div>
+                Rating: {{current.showRating}}
+                <div class="spacer"></div>
                 
                 <br/>
 
@@ -37,13 +39,11 @@
                 <br/>
 
                 <div class="spacer"></div>
-                Status: {{current.showStatus}}
+                Production status: {{current.showStatus}}
                 <div class="spacer"></div>
                 Runtime: {{current.showRuntime}} minutes
                 <div class="spacer"></div>
-                Next showing(s): {{current.showTime}}
-                {{current.showDays}}
-                on {{current.showNetwork}}
+                Next showing(s): {{current.showTime}} {{current.showDays}} on {{current.showNetwork}}
             </mat-card>
 
         </div> <!-- ends div 'flex'-->

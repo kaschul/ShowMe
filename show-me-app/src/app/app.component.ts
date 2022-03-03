@@ -17,6 +17,7 @@ export class AppComponent {
     showRuntime: 0,
     showTime: '',
     showDays: [],
+    showRating: 0,
     showNetwork: '',
     showImage: '',
     showSummary: ''

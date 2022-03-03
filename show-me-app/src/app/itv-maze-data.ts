@@ -8,6 +8,9 @@ export interface ITvMazeData {
         time: string,
         days: []
     },
+    rating: {
+        average: number
+    },
     network: {
         name: string
     },
